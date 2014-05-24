@@ -140,7 +140,7 @@ end
 def test_card_array(customer_id)
   { :data   => [test_card, test_card, test_card],
     :object => 'list',
-    :url    => '/v1/customers/' + customer_id + '/cards',
+    :url    => "/v1/customers/#{customer_id}/cards",
   }
 end
 
@@ -342,6 +342,28 @@ end
 def test_delete_discount_response
   { :deleted => true,
     :id      => "di_test_coupon",
+  }
+end
+
+def test_bank_account
+  { :id          => "ba_1045Wi4Nq4kCqJ5FUlXHvxNB",
+    :object      => "bank_account",
+    :bank_name   => "STRIPE TEST BANK",
+    :last4       => "6789",
+    :country     => "US",
+    :currency    => "usd",
+    :validated   => false,
+    :verified    => true,
+    :fingerprint => "PkpXAgRBwVWX54hV",
+    :disabled    => false,
+  }
+end
+
+def test_bank_account_array(customer_id)
+  { :data     => [test_bank_account],
+    :object   => "list",
+    :has_more => false,
+    :url      => "/v1/customers/#{customer_id}/bank_accounts",
   }
 end
 

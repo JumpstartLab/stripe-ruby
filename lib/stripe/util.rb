@@ -17,21 +17,22 @@ module Stripe
 
     def self.object_classes
       @object_classes ||= {
-        'balance' => Balance,
+        'balance'             => Balance,
         'balance_transaction' => BalanceTransaction,
-        'charge' => Charge,
-        'customer' => Customer,
-        'invoiceitem' => InvoiceItem,
-        'invoice' => Invoice,
-        'plan' => Plan,
-        'coupon' => Coupon,
-        'event' => Event,
-        'transfer' => Transfer,
-        'recipient' => Recipient,
-        'card' => Card,
-        'subscription' => Subscription,
-        'list' => ListObject,
-        'application_fee' => ApplicationFee
+        'bank_account'        => BankAccount,
+        'charge'              => Charge,
+        'customer'            => Customer,
+        'invoiceitem'         => InvoiceItem,
+        'invoice'             => Invoice,
+        'plan'                => Plan,
+        'coupon'              => Coupon,
+        'event'               => Event,
+        'transfer'            => Transfer,
+        'recipient'           => Recipient,
+        'card'                => Card,
+        'subscription'        => Subscription,
+        'list'                => ListObject,
+        'application_fee'     => ApplicationFee,
       }
     end
 
