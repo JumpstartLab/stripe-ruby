@@ -39,6 +39,7 @@ require 'stripe/card'
 require 'stripe/subscription'
 require 'stripe/application_fee'
 require 'stripe/bank_account'
+require 'stripe/payment'
 
 # Errors
 require 'stripe/errors/stripe_error'

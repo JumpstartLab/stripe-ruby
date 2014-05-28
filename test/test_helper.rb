@@ -345,6 +345,33 @@ def test_delete_discount_response
   }
 end
 
+def test_payment
+  { :id                   => "py_2jOYfo213EKxIk",
+    :object               => "payment",
+    :created              => 1381458902,
+    :livemode             => false,
+    :amount               => 100,
+    :currency             => "usd",
+    :payment_method       => "ach",
+    :payment_source       => {
+      :object      => "bank_account",
+      :id          => "ba_2gjqUkUwN31jI5",
+      :bank_name   => "STRIPE TEST BANK",
+      :last4       => "6789",
+      :country     => "US",
+      :currency    => "usd",
+      :validated   => false,
+      :verified    => true,
+      :fingerprint => "glTJvPVnzCgyOwjh",
+    },
+    :balance_transaction  => "txn_2jOYrlBKKNzCfl",
+    :customer             => "cus_2gjqT8FOFoESWu",
+    :description          => nil,
+    :statement_descriptor => nil,
+    :status               => "pending",
+  }
+end
+
 def test_bank_account
   { :id          => "ba_1045Wi4Nq4kCqJ5FUlXHvxNB",
     :object      => "bank_account",

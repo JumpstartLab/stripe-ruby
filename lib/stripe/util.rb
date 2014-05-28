@@ -33,6 +33,7 @@ module Stripe
         'subscription'        => Subscription,
         'list'                => ListObject,
         'application_fee'     => ApplicationFee,
+        'payment'             => Payment,
       }
     end
 
