@@ -19,6 +19,7 @@ module Stripe
 
     def self.object_classes
       @object_classes ||= {
+<<<<<<< HEAD
         # data structures
         'list' => ListObject,
 
@@ -50,6 +51,25 @@ module Stripe
         'product' => Product,
         'sku' => SKU,
         'order' => Order,
+=======
+        'balance'             => Balance,
+        'balance_transaction' => BalanceTransaction,
+        'bank_account'        => BankAccount,
+        'charge'              => Charge,
+        'customer'            => Customer,
+        'invoiceitem'         => InvoiceItem,
+        'invoice'             => Invoice,
+        'plan'                => Plan,
+        'coupon'              => Coupon,
+        'event'               => Event,
+        'transfer'            => Transfer,
+        'recipient'           => Recipient,
+        'card'                => Card,
+        'subscription'        => Subscription,
+        'list'                => ListObject,
+        'application_fee'     => ApplicationFee,
+        'payment'             => Payment,
+>>>>>>> e6c1bd3513933495a7dd34a261c736623f17e07c
       }
     end
 

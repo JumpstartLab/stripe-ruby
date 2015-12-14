@@ -58,6 +58,14 @@ module Stripe
       initialize_from({ :discount => nil }, opts, true)
     end
 
+    def bank_accounts
+      response, api_key = Stripe.request(:get, bank_accounts_url, @api_key)
+      response[:data].each do |bank_account_data|
+        bank_account_data[:customer] = id
+      end
+      Util.convert_to_stripe_object(response, api_key)
+    end
+
     private
 
     def discount_url
@@ -70,6 +78,10 @@ module Stripe
 
     def subscriptions_url
       url + '/subscriptions'
+    end
+
+    def bank_accounts_url
+      url + '/bank_accounts'
     end
   end
 end

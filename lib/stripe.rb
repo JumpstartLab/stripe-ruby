@@ -43,6 +43,7 @@ require 'stripe/bank_account'
 require 'stripe/card'
 require 'stripe/subscription'
 require 'stripe/application_fee'
+<<<<<<< HEAD
 require 'stripe/refund'
 require 'stripe/reversal'
 require 'stripe/application_fee_refund'
@@ -52,6 +53,10 @@ require 'stripe/dispute'
 require 'stripe/product'
 require 'stripe/sku'
 require 'stripe/order'
+=======
+require 'stripe/bank_account'
+require 'stripe/payment'
+>>>>>>> e6c1bd3513933495a7dd34a261c736623f17e07c
 
 # Errors
 require 'stripe/errors/stripe_error'
