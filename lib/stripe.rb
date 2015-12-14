@@ -43,7 +43,6 @@ require 'stripe/bank_account'
 require 'stripe/card'
 require 'stripe/subscription'
 require 'stripe/application_fee'
-<<<<<<< HEAD
 require 'stripe/refund'
 require 'stripe/reversal'
 require 'stripe/application_fee_refund'
@@ -53,10 +52,8 @@ require 'stripe/dispute'
 require 'stripe/product'
 require 'stripe/sku'
 require 'stripe/order'
-=======
 require 'stripe/bank_account'
 require 'stripe/payment'
->>>>>>> e6c1bd3513933495a7dd34a261c736623f17e07c
 
 # Errors
 require 'stripe/errors/stripe_error'
@@ -249,7 +246,7 @@ module Stripe
     # It is only safe to retry network failures on post and delete
     # requests if we add an Idempotency-Key header
     if [:post, :delete].include?(method) && self.max_network_retries > 0
-      headers[:idempotency_key] ||= SecureRandom.uuid 
+      headers[:idempotency_key] ||= SecureRandom.uuid
     end
 
     headers[:stripe_version] = api_version if api_version
